@@ -1,0 +1,22 @@
+<div class="wrap">
+	<mat-form-field>
+		<mat-select placeholder="Select Locale" [(ngModel)]="locale" name="food">
+			<mat-option *ngFor="let l of locales" [value]="l">
+				{{l}}
+			</mat-option>
+		</mat-select>
+	</mat-form-field>
+
+	<p>
+		Selected LOCALE: <b>{{locale}}</b>
+	</p>
+	<p>
+		Number: <b>{{1234.56 | number: '1.0-3': locale}}</b>
+	</p>
+	<p>
+		Currency: <b>{{2000.3 | currency: 'CAD':'symbol-narrow':'4.2-2':locale}}</b>
+	</p>
+	<p>
+		Date: <b>{{ date | date: 'longDate': 'Z': locale}}</b>
+	</p>
+</div>

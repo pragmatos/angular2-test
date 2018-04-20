@@ -1,0 +1,7 @@
+<form (submit)="addTodo(name.value); $event.preventDefault()">
+  <input #name/>
+</form>
+<ul>
+  <todo-item *ngFor="let todo of todos" [todo]="todo"></todo-item>
+</ul>
+<output>{{todos.length}}</output>

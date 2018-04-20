@@ -1,0 +1,5 @@
+
+<li (click)="toggleCompleted(todo)" [class.completed]="todo.completed">
+  {{todo.name}}
+  <button (click)="removeTodo(todo)">X</button>
+</li>
